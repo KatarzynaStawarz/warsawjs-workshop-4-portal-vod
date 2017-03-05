@@ -19,9 +19,17 @@ export class LatestVideoService {
   getVideo(id:string) {
     return this.getVideos()
       .then((videos) => {
-        return videos.filter(function(x){
+        return videos.find(function(x){
           return x.id == id;
-        })[0];
+        });
+      })
+  }
+  searchVideoByTitle(phrase: string): Promise<any[]> {
+    return this.getVideos()
+      .then((videos) => {
+        return videos.filter((video) => {
+          return new RegExp(phrase, 'i').test(video.name);
+        });
       })
   }
 }

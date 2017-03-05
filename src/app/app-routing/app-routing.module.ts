@@ -1,11 +1,16 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {VideoListComponent} from "../video-list/video-list.component";
 import {VideoComponent} from "../video/video.component";
+import {VideoNotFoundComponent} from "../video-not-found/video-not-found.component";
+import {SearchComponent} from "../search/search.component";
+import {LatestVideoListComponent} from "../latest-video-list/latest-video-list.component";
 
 const routes: Routes = [
-  { path: '', component: VideoListComponent},
-  { path: 'video/:id', component: VideoComponent }
+  {path: '', component: LatestVideoListComponent},
+  {path: 'video/:id', component: VideoComponent},
+  {path: 'video-not-found', component: VideoNotFoundComponent},
+  {path: 'search', component: SearchComponent}
 ];
 
 @NgModule({
@@ -16,4 +21,5 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

@@ -1,5 +1,5 @@
 video {
-  width: 900px;
+  width: 100%;
 }
 
 ul {
@@ -16,5 +16,5 @@ h2 {
   padding: 5px 5px;
 }
 div {
-  width: 900px;
+  width: 80%;
 }

@@ -1,10 +1,10 @@
-<p>
-  video-list works!
-</p>
 <ul>
   <li
-    *ngFor="let video of videos"
+    *ngFor="let video of videos | paginate: { itemsPerPage: 3, currentPage: p }"
   >
     <app-video-detail [video]="video"></app-video-detail>
   </li>
 </ul>
+<div class="clearfix text-center">
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
