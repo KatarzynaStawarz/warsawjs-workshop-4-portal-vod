@@ -1,0 +1,10 @@
+<p>
+  video-list works!
+</p>
+<ul>
+  <li
+    *ngFor="let video of videos"
+  >
+    <app-video-detail [video]="video"></app-video-detail>
+  </li>
+</ul>

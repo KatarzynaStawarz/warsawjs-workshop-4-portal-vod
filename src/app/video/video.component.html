@@ -1,0 +1,6 @@
+<div *ngIf="video">
+<h2>{{video.name}}</h2>
+<video [src]="video.url" [poster]="video.thumb" controls>
+  <!--[] pozwala na wczytanie dopiero jak już angular to utworzy-->
+</video>
+</div>
