@@ -16,3 +16,6 @@ h2 {
   background-color: lightgrey;
   padding: 5px 5px;
 }
+pagination-controls {
+  margin-top: 20px;
+}

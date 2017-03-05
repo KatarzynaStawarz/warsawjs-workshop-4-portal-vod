@@ -1,3 +1,6 @@
+<a (click)="sortAscending()">Alfabetycznie</a>
+<a (click)="sortDescending()">Odwrotnie</a>
+
 <ul>
   <li
     *ngFor="let video of videos | paginate: { itemsPerPage: 3, currentPage: p }"
